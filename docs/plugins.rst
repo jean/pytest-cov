@@ -3,10 +3,10 @@ Plugin coverage
 ===============
 
 Getting coverage on pytest plugins is a very particular situation. Because how pytest implements plugins (using setuptools
-entrypoints) it doesn't allow controling the order in which the plugins load.
+entrypoints) it doesn't allow controlling the order in which the plugins load.
 See `pytest/issues/935 <https://github.com/pytest-dev/pytest/issues/935#issuecomment-245107960>`_ for technical details.
 
-The current way of dealing with this problem is using the append feature and manually starting ``pytest-cov``'s engine, eg:
+The current way of dealing with this problem is using the append feature and manually starting ``pytest-cov``'s engine, e.g.:
 
     COV_CORE_SOURCE=src COV_CORE_CONFIG=.coveragerc COV_CORE_DATAFILE=.coverage.eager py.test --cov=src --cov-append
 
